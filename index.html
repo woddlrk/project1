@@ -119,29 +119,68 @@
     <!-- Pasted Image(이벤트 슬라이드 캡처) 추가 -->
     <section class="event-slide">
         <div class="event-slide-container">
-            <div class="event-slide-list">
-                <div class="event-slide-item">
+            <div class="event-slide-list" id="eventSlideList" style="display: flex; overflow-x: auto; gap: 2rem; scroll-snap-type: x mandatory; padding-bottom: 1rem;">
+                <div class="event-slide-item" style="min-width: 340px; flex: 0 0 auto; scroll-snap-align: start;">
                     <img src="https://image.osulloc.com/upload/kr/ko/event/250719/img_01.jpg" alt="케이크 & 티푸드 WEEK" />
                     <div class="event-slide-title">케이크 & 티푸드 WEEK</div>
                     <div class="event-slide-date">25.07.19~25.07.27</div>
                 </div>
-                <div class="event-slide-item">
+                <div class="event-slide-item" style="min-width: 340px; flex: 0 0 auto; scroll-snap-align: start;">
                     <img src="https://image.osulloc.com/upload/kr/ko/event/250719/img_10.jpg" alt="헬로키티 공식몰 오픈 오픈특가" />
                     <div class="event-slide-title">헬로키티 공식몰 오픈 오픈특가 ~30%</div>
                     <div class="event-slide-date">25.07.10~25.07.27</div>
                 </div>
-                <div class="event-slide-item">
+                <div class="event-slide-item" style="min-width: 340px; flex: 0 0 auto; scroll-snap-align: start;">
                     <img src="https://image.osulloc.com/upload/kr/ko/event/250719/img_11.jpg" alt="7월 출석체크" />
                     <div class="event-slide-title">7월 출석체크</div>
                     <div class="event-slide-date">25.07.01~25.07.31</div>
                 </div>
+                <div class="event-slide-item" style="min-width: 340px; flex: 0 0 auto; scroll-snap-align: start;">
+                    <img src="https://image.osulloc.com/upload/kr/ko/adminImage/WE/LI/1000_20241231172318101GT.webp" alt="오설록 이벤트4" />
+                    <div class="event-slide-title">오설록 이벤트4</div>
+                    <div class="event-slide-date">25.08.01~25.08.10</div>
+                </div>
+                <div class="event-slide-item" style="min-width: 340px; flex: 0 0 auto; scroll-snap-align: start;">
+                    <img src="https://image.osulloc.com/upload/kr/ko/adminImage/BZ/HF/1000_20250102093241622CI.webp" alt="오설록 이벤트5" />
+                    <div class="event-slide-title">오설록 이벤트5</div>
+                    <div class="event-slide-date">25.08.11~25.08.20</div>
+                </div>
+                <div class="event-slide-item" style="min-width: 340px; flex: 0 0 auto; scroll-snap-align: start;">
+                    <img src="https://image.osulloc.com/upload/kr/ko/adminImage/EB/WK/1000_20250117135942970HW.webp" alt="오설록 이벤트6" />
+                    <div class="event-slide-title">오설록 이벤트6</div>
+                    <div class="event-slide-date">25.08.21~25.08.31</div>
+                </div>
+                <div class="event-slide-item" style="min-width: 340px; flex: 0 0 auto; scroll-snap-align: start;">
+                    <img src="https://image.osulloc.com/upload/kr/ko/adminImage/QD/KM/1000_20250421094514803QS.webp" alt="오설록 이벤트9" />
+                    <div class="event-slide-title">오설록 이벤트9</div>
+                    <div class="event-slide-date">25.09.21~25.09.25</div>
+                </div>
+                <div class="event-slide-item" style="min-width: 340px; flex: 0 0 auto; scroll-snap-align: start;">
+                    <img src="https://image.osulloc.com/upload/kr/ko/adminImage/BI/JO/1000_20241213184526657RT.webp" alt="오설록 이벤트10" />
+                    <div class="event-slide-title">오설록 이벤트10</div>
+                    <div class="event-slide-date">25.09.26~25.09.30</div>
+                </div>
             </div>
-            <div class="event-slide-nav event-slide-nav-left">&#60;</div>
-            <div class="event-slide-nav event-slide-nav-right">&#62;</div>
+            <div class="event-slide-nav event-slide-nav-left" id="eventSlideLeft">&#60;</div>
+            <div class="event-slide-nav event-slide-nav-right" id="eventSlideRight">&#62;</div>
             <a href="#" class="event-slide-viewall">전체 보기</a>
         </div>
     </section>
-
+    <script>
+    // 가로 슬라이드 화살표 클릭 시 스크롤 이동
+    document.addEventListener('DOMContentLoaded', function() {
+        const slideList = document.getElementById('eventSlideList');
+        const leftBtn = document.getElementById('eventSlideLeft');
+        const rightBtn = document.getElementById('eventSlideRight');
+        const slideWidth = 360; // slide-item의 min-width + gap 대략치
+        leftBtn.addEventListener('click', function() {
+            slideList.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+        });
+        rightBtn.addEventListener('click', function() {
+            slideList.scrollBy({ left: slideWidth, behavior: 'smooth' });
+        });
+    });
+    </script>
 
     <section class="main-visual">
         <div class="main-visual-bg">
@@ -155,12 +194,70 @@
         </div>
     </section>
 
-    <footer class="footer">
-        <ul>
-            <li>SUBSCRIBE</li>
-            <li>POLICY</li>
-            <li>INSTAGRAM</li>
-        </ul>
+    <footer class="footer osulloc-footer">
+        <div class="footer-row">
+            <div class="footer-col logo-col">
+                <img src="https://image.osulloc.com/kr/ko/static/v2/images/common/logo_footer.webp" alt="오설록 로고" class="footer-logo" />
+                <div class="footer-brand">오설록</div>
+            </div>
+            <div class="footer-col contact-col">
+                <div class="footer-title">고객 상담 센터/주문배송 문의</div>
+                <div class="footer-phone">080-805-5555</div>
+                <div class="footer-email">help@osulloc.com</div>
+                <div class="footer-time">평일 09:00 - 18:00<br>점심 (12:00 - 13:00)</div>
+            </div>
+            <div class="footer-col bulk-col">
+                <div class="footer-title">특판 및 대량구매</div>
+                <div class="footer-email">mall@osulloc.com</div>
+                <div class="footer-kakao">카카오톡 ID : osullocmall</div>
+                <div class="footer-time">평일 09:30 - 17:00<br>점심 (11:30 - 13:00)</div>
+            </div>
+            <div class="footer-col member-col">
+                <div class="footer-title">회원 혜택</div>
+                <div>1:1 문의</div>
+                <div>오설록 멤버십 혜택</div>
+                <div>뷰티포인트 추후적립</div>
+            </div>
+            <div class="footer-col social-col">
+                <div class="footer-title">소셜미디어</div>
+                <div>카카오톡 플러스친구</div>
+                <div>인스타그램</div>
+                <div>유튜브</div>
+                <div>틱톡</div>
+                <div>X(구 트위터)</div>
+            </div>
+            <div class="footer-col lang-col">
+                <div class="footer-title">LANGUAGE</div>
+                <div>KOREAN</div>
+                <div>ENGLISH</div>
+                <div>CHINESE(中文)</div>
+            </div>
+            <div class="footer-col notice-col">
+                <div class="footer-title">공지사항</div>
+                <ul class="footer-notice-list">
+                    <li>[공지] 헬로키티 판매 & 일정 & 판매처 안내</li>
+                    <li>[공지] 오설록 일부 세트 제품 소비자가 조정 안내</li>
+                    <li>[공지] 2025년 설 보자가 상품별 보자가 색 안내</li>
+                </ul>
+                <a href="#" class="footer-notice-more">더 보기&gt;</a>
+            </div>
+        </div>
+        <div class="footer-row footer-bottom-row">
+            <div class="footer-links">
+                회사소개 ㅣ 서비스 이용약관 ㅣ <b>개인정보 처리방침</b> ㅣ 영상정보 처리방침 ㅣ 임직원 할인 ㅣ 전자공고
+            </div>
+            <div class="footer-company-info">
+                (주)오설록  대표이사: 홍길동  주소: 서울특별자치도 향동시 사발면 신화역사로 15 (오설록 티뮤지엄)  사업자등록번호: 110-20-31123  통신판매업신고번호: 2024-향동사발면-0075  호스팅제공자: (주)오설록  사업자 정보 확인 &gt;<br>
+                (주)오설록은 오설록 브랜드를 제외한 입점 브랜드에 대해서는 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 입점판매자가 등록한 상품정보 및 거래에 대해서는 책임을 지지 않습니다.
+            </div>
+            <div class="footer-kcp-box">
+                <img src="https://image.osulloc.com/kr/ko/static/v2/images/common/icon_escrow.webp" alt="KCP 구매안전" class="footer-kcp-img" />
+                <div class="footer-kcp-text">
+                    NHN KCP 구매안전(에스크로)서비스<br>
+                    고객님의 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에 가입한 NHN KCP의 구매안전서비스를 이용하실 수 있습니다.
+                </div>
+            </div>
+        </div>
     </footer>
     <script src=" script/js.js"></script>
 
