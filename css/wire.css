@@ -118,21 +118,32 @@ body {
 .main-nav ul {
     display: flex;
     gap: 2.5rem;
+    align-items: center;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .main-nav li {
-    font-size: 1.15rem;
-    font-weight: 600;
-    color: #222;
-    cursor: pointer;
     position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+    padding: 0 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: color 0.2s;
 }
 
-.main-nav li:not(:last-child)::after {
-    content: '';
+.main-nav li span {
     display: inline-block;
-    margin-left: 1.5rem;
+    padding: 8px 0;
+}
+
+.main-nav li:hover > span,
+.main-nav li:focus-within > span {
+    color: #1b8a3b;
 }
 
 .header-actions {
@@ -920,4 +931,95 @@ button {
     .osulloc-footer .footer-kcp-box {
         margin-top: 10px;
     }
+}
+
+/* GNB(메가메뉴) 스타일 */
+.gnb-item {
+    position: relative;
+}
+.gnb-dropdown {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 900px;
+    background: rgba(255,255,255,0.98);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    border-radius: 0 0 16px 16px;
+    padding: 40px 40px 30px 40px;
+    z-index: 100;
+    min-height: 180px;
+}
+.gnb-item:hover .gnb-dropdown,
+.gnb-item:focus-within .gnb-dropdown {
+    display: block;
+}
+.gnb-dropdown-inner {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    align-items: flex-start;
+}
+.gnb-col-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.gnb-col-vertical ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+.gnb-col-vertical ul li {
+    font-size: 17px;
+    color: #222;
+    margin-bottom: 0;
+    cursor: pointer;
+    transition: color 0.2s;
+    font-weight: 400;
+    text-align: left;
+    min-width: 120px;
+}
+.gnb-col-vertical ul li:hover {
+    color: #1b8a3b;
+}
+.gnb-item.gnb-brand .gnb-dropdown {
+    min-width: 900px;
+    width: 900px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 40px 40px 30px 40px;
+    background: rgba(255,255,255,0.98);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    border-radius: 0 0 16px 16px;
+    z-index: 100;
+    min-height: 180px;
+}
+.gnb-brand-inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 60px;
+}
+.gnb-item.gnb-brand .gnb-col-vertical ul {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    align-items: flex-start;
+}
+.gnb-item.gnb-brand .gnb-col-vertical ul li {
+    font-size: 17px;
+    color: #222;
+    font-weight: 400;
+    margin-bottom: 0;
+    cursor: pointer;
+    transition: color 0.2s;
+    white-space: nowrap;
+    text-align: left;
+    min-width: 120px;
+}
+.gnb-item.gnb-brand .gnb-col-vertical ul li:hover {
+    color: #1b8a3b;
 }
