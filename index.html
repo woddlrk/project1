@@ -77,8 +77,8 @@
                 </ul>
             </nav>
             <div class="header-actions">
-                <span class="icon search" aria-label="검색"></span>
-                <span class="icon cart" aria-label="장바구니"></span>
+                <span class="icon search" role="img" aria-label="검색"></span>
+                <span class="icon cart" role="img" aria-label="장바구니"></span>
                 <a href="#" class="action">출석체크</a>
                 <a href="#" class="action">로그인</a>
             </div>
@@ -114,6 +114,7 @@
 
     <!-- 이벤트 상품 리스트 섹션 시작 -->
     <section class="event-list">
+        <h2 class="visually-hidden">이벤트 상품 리스트</h2>
         <div class="event-list-container">
             <div class="event-label">EVENT 1</div>
             <div class="event-item">
@@ -167,7 +168,10 @@
 
     <!-- 이벤트 슬라이드 -->
     <section class="event-slide">
+        <h2 class="visually-hidden">이벤트 슬라이드</h2>
         <div class="event-slide-container">
+            <button type="button" class="event-slide-nav event-slide-nav-left" id="eventSlideLeft" tabindex="0" aria-label="이전 슬라이드">&#60;</button>
+            <button type="button" class="event-slide-nav event-slide-nav-right" id="eventSlideRight" tabindex="0" aria-label="다음 슬라이드">&#62;</button>
             <div class="event-slide-list" id="eventSlideList" style="display: flex; overflow-x: auto; gap: 2rem; scroll-snap-type: x mandatory; padding-bottom: 1rem;">
                 <div class="event-slide-item" style="min-width: 340px; flex: 0 0 auto; scroll-snap-align: start;">
                     <img src="https://image.osulloc.com/upload/kr/ko/event/250719/img_01.jpg" alt="케이크 &amp; 티푸드 WEEK">
@@ -210,8 +214,6 @@
                     <div class="event-slide-date">25.09.26~25.09.30</div>
                 </div>
             </div>
-            <div class="event-slide-nav event-slide-nav-left" id="eventSlideLeft" tabindex="0" aria-label="이전 슬라이드">&#60;</div>
-            <div class="event-slide-nav event-slide-nav-right" id="eventSlideRight" tabindex="0" aria-label="다음 슬라이드">&#62;</div>
             <a href="#" class="event-slide-viewall">전체 보기</a>
         </div>
     </section>
