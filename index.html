@@ -2,11 +2,11 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>오설록-프로젝트</title>
-    <link rel="stylesheet" href="css/wire.css" >
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" >
+    <link rel="stylesheet" href="css/wire.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 
 <body>
@@ -87,7 +87,7 @@
 
     <section class="main-banner">
         <div class="main-banner-img-wrap">
-            <img src="https://image.osulloc.com/upload/kr/ko/event/250719/img_01.jpg" alt="케이크 &amp; 티푸드 WEEK" class="main-banner-img" >
+            <img src="https://image.osulloc.com/upload/kr/ko/event/250719/img_01.jpg" alt="케이크 &amp; 티푸드 WEEK" class="main-banner-img">
             <div class="main-banner-text">
                 <p class="main-banner-sub">오늘만은 케이크와 티푸드가 메인이다!</p>
                 <h1 class="main-banner-title">케이크 &amp; 티푸드 WEEK</h1>
@@ -101,7 +101,7 @@
             <h2 class="weekly-issue-title">WEEKLY ISSUE PICK</h2>
             <div class="weekly-issue-content">
                 <div class="weekly-issue-img">
-                    <img src="https://image.osulloc.com/kr/ko/static/v2/images/main/teahouse_gimpo.webp" alt="오설록 랑드샤 티 4종 세트" >
+                    <img src="https://image.osulloc.com/kr/ko/static/v2/images/main/teahouse_gimpo.webp" alt="오설록 랑드샤 티 4종 세트">
                 </div>
                 <div class="weekly-issue-info">
                     <h3>에어컨으로 추울 땐 따뜻한 차 한잔으로 냉방병 극복</h3>
@@ -119,7 +119,7 @@
             <div class="event-label">EVENT 1</div>
             <div class="event-item">
                 <div class="event-img">
-                    <img src="https://image.osulloc.com/upload/kr/ko/event/250719/img_03.jpg" alt="그린티 롤케이크" >
+                    <img src="https://image.osulloc.com/upload/kr/ko/event/250719/img_03.jpg" alt="그린티 롤케이크">
                     <span class="event-discount">20%</span>
                 </div>
                 <div class="event-info">
@@ -131,7 +131,7 @@
             </div>
             <div class="event-item">
                 <div class="event-img">
-                    <img src="https://image.osulloc.com/upload/kr/ko/event/250719/img_04.jpg" alt="말차 마들렌 컬렉션" >
+                    <img src="https://image.osulloc.com/upload/kr/ko/event/250719/img_04.jpg" alt="말차 마들렌 컬렉션">
                     <span class="event-discount">20%</span>
                 </div>
                 <div class="event-info">
@@ -148,7 +148,7 @@
         <div class="evt_cont_container">
             <div class="evt_cont_label">EVENT 2</div>
             <div class="evt_cont_item">
-                <img src="https://image.osulloc.com/upload/kr/ko/event/250719/img_09.jpg" alt="오설록 이벤트 이미지2" >
+                <img src="https://image.osulloc.com/upload/kr/ko/event/250719/img_09.jpg" alt="오설록 이벤트 이미지2">
                 <div class="evt_cont_info">
                     <h3>여름 한정 티푸드 세트</h3>
                     <p>여름에만 만날 수 있는 한정 티푸드 세트를 놓치지 마세요!</p>
@@ -156,7 +156,7 @@
                 </div>
             </div>
             <div class="evt_cont_item">
-                <img src="https://image.osulloc.com/upload/kr/ko/event/250719/img_08.jpg" alt="오설록 이벤트 이미지1" >
+                <img src="https://image.osulloc.com/upload/kr/ko/event/250719/img_08.jpg" alt="오설록 이벤트 이미지1">
                 <div class="evt_cont_info">
                     <h3>오설록 티푸드와 함께하는 특별한 이벤트</h3>
                     <p>지금 오설록 티푸드 구매 시 다양한 혜택을 만나보세요!</p>
@@ -218,25 +218,24 @@
         </div>
     </section>
     <script>
-    // 가로 슬라이드 화살표 클릭 시 스크롤 이동
-    document.addEventListener('DOMContentLoaded', function() {
-        const slideList = document.getElementById('eventSlideList');
-        const leftBtn = document.getElementById('eventSlideLeft');
-        const rightBtn = document.getElementById('eventSlideRight');
-        const slideWidth = 360; // slide-item의 min-width + gap 대략치
-        leftBtn.addEventListener('click', function() {
-            slideList.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+        // 가로 슬라이드 화살표 클릭 시 스크롤 이동
+        document.addEventListener('DOMContentLoaded', function () {
+            const slideList = document.getElementById('eventSlideList');
+            const leftBtn = document.getElementById('eventSlideLeft');
+            const rightBtn = document.getElementById('eventSlideRight');
+            const slideWidth = 360; // slide-item의 min-width + gap 대략치
+            leftBtn.addEventListener('click', function () {
+                slideList.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+            });
+            rightBtn.addEventListener('click', function () {
+                slideList.scrollBy({ left: slideWidth, behavior: 'smooth' });
+            });
         });
-        rightBtn.addEventListener('click', function() {
-            slideList.scrollBy({ left: slideWidth, behavior: 'smooth' });
-        });
-    });
     </script>
 
     <section class="main-visual">
         <div class="main-visual-bg">
-            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80"
-                alt="케이크 &amp; 티푸드 WEEK" class="main-visual-img">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="케이크 &amp; 티푸드 WEEK" class="main-visual-img">
             <div class="main-visual-text">
                 <p class="main-visual-sub">오늘만은 케이크와 티푸드가 메인이다!</p>
                 <h2 class="main-visual-title">케이크 &amp; 티푸드 WEEK</h2>
@@ -298,7 +297,7 @@
                 회사소개 ㅣ 서비스 이용약관 ㅣ <strong><a href="#">개인정보 처리방침</a></strong> ㅣ 영상정보 처리방침 ㅣ 임직원 할인 ㅣ 전자공고
             </div>
             <div class="footer-company-info">
-                (주)오설록  대표이사: 홍길동  주소: 서울특별자치도 종로시 사발면 불어터진로 15 (오설록 티뮤지엄)  사업자등록번호: 110-20-31123  통신판매업신고번호: 2024-서울안덕-0075  호스팅제공자: (주)오설록  <a href="#">사업자 정보 확인</a>
+                (주)오설록 대표이사: 홍길동 주소: 서울특별자치도 종로시 사발면 불어터진로 15 (오설록 티뮤지엄) 사업자등록번호: 110-20-31123 통신판매업신고번호: 2024-서울안덕-0075 호스팅제공자: (주)오설록 <a href="#">사업자 정보 확인</a>
                 (주)오설록은 오설록 브랜드를 제외한 입점 브랜드에 대해서는 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 입점판매자가 등록한 상품정보 및 거래에 대해서는 책임을 지지 않습니다.
             </div>
             <div style="display: flex; align-items: center; gap: 2rem; justify-content: flex-start; margin-top: 1rem;">
@@ -315,6 +314,7 @@
             </div>
         </div>
     </footer>
+    <script src='https://code.jquery.com/jquery-1.12.1.min.js'></script>
     <script src="script/js.js"></script>
 
 </body>
